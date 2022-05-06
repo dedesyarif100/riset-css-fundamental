@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#exampleOne {
+    width: 200px;
+    height: 150px;
+    border: 1px solid #c3c3c3;
+    display: flex;
+    flex-wrap: wrap;
+}
+#exampleOne div {
+    width: 50px;
+    height: 50px;
+}
+</style>
+</head>
+<body>
+
+<div><hr>
+    <div id="exampleOne">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <button onclick="setFlexWrapNoWrap()">setFlexWrapNoWrap</button>
+    <button onclick="setFlexWrap()">setFlexWrap</button>
+    <button onclick="setFlexWrapReverse()">setFlexWrapReverse</button>
+</div><hr>
+
+<script>
+let setFlexWrapNoWrap = () => {
+    let setFlexWrapNoWrap = document.querySelector("#exampleOne");
+    setFlexWrapNoWrap.style.flexWrap = "nowrap";
+}
+let setFlexWrap = () => {
+    let setFlexWrap = document.querySelector("#exampleOne");
+    setFlexWrap.style.flexWrap = "wrap";
+}
+let setFlexWrapReverse = () => {
+    let setFlexWrapReverse = document.querySelector("#exampleOne");
+    setFlexWrapReverse.style.flexWrap = "wrap-reverse";
+}
+</script>
+</body>
+</html>

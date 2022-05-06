@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#exampleOne {
+    border: 7px solid black;
+    width: 300px;
+    height: 150px;
+}
+</style>
+</head>
+<body>
+
+<div><hr>
+    <div id="exampleOne">
+        <h1>Hello</h1>
+        <button onclick="setBorderStyle()">Set Border Style</button>
+        <button onclick="setDefault()">Set Default</button>
+    </div>
+</div><hr>
+
+<script>
+let setBorderStyle = () => {
+    document.querySelector("#exampleOne").style.borderStyle = "dotted double";
+}
+let setDefault = () => {
+    document.querySelector("#exampleOne").style.removeProperty("border-style");
+}
+</script>
+</body>
+</html>

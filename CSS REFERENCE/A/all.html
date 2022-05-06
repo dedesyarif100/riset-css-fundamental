@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html {
+    font-size: small;
+    color: blue;
+}
+#exampleOne > #listExampleOne {
+    background-color: yellow;
+    color: red;
+}
+</style>
+</head>
+<body>
+
+<div id="exampleOne"><hr>
+    <p>No all property:</p>
+    <div id="listExampleOne">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    <button onclick="Inherit()">Inherit</button>
+    <button onclick="Initial()">Initial</button>
+    <button onclick="Unset()">Unset</button>
+    <button onclick="SetDefault()">Set Default</button>
+</div><hr>
+
+<script>
+let Inherit = () => {
+    let exampleOne = document.querySelector("#exampleOne");
+    exampleOne.querySelector("#listExampleOne").style.all = "inherit";
+}
+let Initial = () => {
+    let exampleOne = document.querySelector("#exampleOne");
+    exampleOne.querySelector("#listExampleOne").style.all = "initial";
+}
+let Unset = () => {
+    let exampleOne = document.querySelector("#exampleOne");
+    exampleOne.querySelector("#listExampleOne").style.all = "unset";
+}
+let SetDefault = () => {
+    let exampleOne = document.querySelector("#exampleOne");
+    exampleOne.querySelector("#listExampleOne").style.removeProperty("all");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+table, th, td {
+    border: 1px solid black;
+    border-spacing: 5px;
+}
+</style>
+</head>
+<body>
+
+<div><hr>
+    <table id="table">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Emil</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>Tobias</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>Linus</td>
+            <td>2</td>
+        </tr>
+    </table>
+    <button onclick="setSpacing()">Set Spacing</button>
+    <button onclick="setDefault()">Set Default</button>
+</div><hr>
+
+<script>
+let setSpacing = () => {
+    document.querySelector("#table").style.borderSpacing = "15px";
+}
+let setDefault = () => {
+    document.querySelector("#table").style.removeProperty("border-spacing");
+}
+</script>
+</body>
+</html>

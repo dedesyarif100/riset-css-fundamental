@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div > span {
+    background-color: yellow;
+}
+div > p {
+    background-color: red;
+}
+
+div > span > p {
+    background-color: blue;
+}
+
+div > .one > div[id="sectionOne"] > h1,
+div > .one > [id="sectionOne"] > h3,
+div > .one > div#sectionOne > h5,
+div > .one > #sectionOne > h6 {
+    color: red;
+}
+
+
+</style>
+</head>
+<body>
+    <h1>Demo of the element > element selector</h1>
+    <div><hr>
+        <span>My name is Donald</span>
+        <p>I live in Duckburg.</p>
+    </div><hr>
+
+    <!-- -------------------------------------------------------------------------------------------- -->
+    <div><hr>
+        <span><p>I will not be styled.</p></span>
+    </div><hr>
+
+    <div><hr>
+        <div class="one"><hr>
+            <div id="sectionOne">
+                <h1>Hello</h1>
+                <h2>Hello</h2>
+                <h3>Hello</h3>
+                <h4>Hello</h4>
+                <h5>Hello</h5>
+                <h6>Hello</h6>
+            </div>
+        </div><hr>
+        <div class="two"><hr>
+            <div id="sectionTwo">
+                <h1>Hello</h1>
+                <h2>Hello</h2>
+                <h3>Hello</h3>
+                <h4>Hello</h4>
+                <h5>Hello</h5>
+                <h6>Hello</h6>
+            </div>
+        </div><hr>
+        <div class="three"><hr>
+            <div id="sectionThree">
+                <h1>Hello</h1>
+                <h2>Hello</h2>
+                <h3>Hello</h3>
+                <h4>Hello</h4>
+                <h5>Hello</h5>
+                <h6>Hello</h6>
+            </div>
+        </div><hr>
+    </div><hr>
+    
+    <p>My best friend is Mickey.</p>
+</body>
+</html>

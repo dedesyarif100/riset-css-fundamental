@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+/* stretch */
+#exampleOne > #main {
+    width: 70px;
+    height: 300px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+#exampleOne > #main div {
+    width: 70px;
+    height: 40px;
+}
+
+/* center */
+#exampleTwo > #main {
+    width: 70px;
+    height: 300px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+#exampleTwo > #main div {
+    width: 70px;
+    height: 40px;
+}
+
+/* flex start */
+#exampleThree > #main {
+    width: 70px;
+    height: 300px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+#exampleThree > #main div {
+    width: 70px;
+    height: 40px;
+}
+
+/* flex end */
+#exampleFour > #main {
+    width: 70px;
+    height: 300px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+#exampleFour > #main div {
+    width: 70px;
+    height: 40px;
+}
+
+/* space-between */
+#exampleFive > #main {
+    width: 70px;
+    height: 300px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+#exampleFive > #main div {
+    width: 70px;
+    height: 40px;
+}
+
+/* space-around */
+#exampleSix > #main {
+    width: 70px;
+    height: 300px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+#exampleSix > #main div {
+    width: 70px;
+    height: 40px;
+}
+
+/* space-evenly */
+#exampleSeven > #main {
+    width: 70px;
+    height: 300px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+#exampleSeven > #main div {
+    width: 70px;
+    height: 40px;
+}
+</style>
+</head>
+<body>
+<h1>The align-content Property</h1>
+
+<div id="exampleOne"><hr>
+    <strong>stretch</strong>
+    <div id="main">
+        <div style="background-color:coral;"></div>
+        <div style="background-color:lightblue;"></div>
+        <div style="background-color:pink;"></div>
+    </div>
+    <button onclick="exampleOne()">Click</button>
+</div><hr>
+
+<div id="exampleTwo"><hr>
+    <strong>center</strong>
+    <div id="main">
+        <div style="background-color:coral;"></div>
+        <div style="background-color:lightblue;"></div>
+        <div style="background-color:pink;"></div>
+    </div>
+    <button onclick="exampleTwo()">Click</button>
+</div><hr>
+
+<div id="exampleThree"><hr>
+    <strong>flex-start</strong>
+    <div id="main">
+        <div style="background-color:coral;"></div>
+        <div style="background-color:lightblue;"></div>
+        <div style="background-color:pink;"></div>
+    </div>
+    <button onclick="exampleThree()">Click</button>
+</div><hr>
+
+<div id="exampleFour"><hr>
+    <strong>flex-end</strong>
+    <div id="main">
+        <div style="background-color:coral;"></div>
+        <div style="background-color:lightblue;"></div>
+        <div style="background-color:pink;"></div>
+    </div>
+    <button onclick="exampleFour()">Click</button>
+</div><hr>
+
+<div id="exampleFive"><hr>
+    <strong>space-between</strong>
+    <div id="main">
+        <div style="background-color:coral;"></div>
+        <div style="background-color:lightblue;"></div>
+        <div style="background-color:pink;"></div>
+    </div>
+    <button onclick="exampleFive()">Click</button>
+</div><hr>
+
+<div id="exampleSix"><hr>
+    <strong>space-around</strong>
+    <div id="main">
+        <div style="background-color:coral;"></div>
+        <div style="background-color:lightblue;"></div>
+        <div style="background-color:pink;"></div>
+    </div>
+    <button onclick="exampleSix()">Click</button>
+</div><hr>
+
+<div id="exampleSeven"><hr>
+    <strong>space-evenly</strong>
+    <div id="main">
+        <div style="background-color:coral;"></div>
+        <div style="background-color:lightblue;"></div>
+        <div style="background-color:pink;"></div>
+    </div>
+    <button onclick="exampleSeven()">Click</button>
+</div><hr>
+
+<script>
+let exampleOne = () => {
+    let exampleOne = document.querySelector("#exampleOne");
+    exampleOne.querySelector("#main").style.alignContent = "stretch";
+}
+
+let exampleTwo = () => {
+    let exampleTwo = document.querySelector("#exampleTwo");
+    exampleTwo.querySelector("#main").style.alignContent = "center";
+}
+
+let exampleThree = () => {
+    let exampleThree = document.querySelector("#exampleThree");
+    exampleThree.querySelector("#main").style.alignContent = "flex-start";
+}
+
+let exampleFour = () => {
+    let exampleFour = document.querySelector("#exampleFour");
+    exampleFour.querySelector("#main").style.alignContent = "flex-end";
+}
+
+let exampleFive = () => {
+    let exampleFive = document.querySelector("#exampleFive");
+    exampleFive.querySelector("#main").style.alignContent = "space-between";
+}
+
+let exampleSix = () => {
+    let exampleSix = document.querySelector("#exampleSix");
+    exampleSix.querySelector("#main").style.alignContent = "space-around";
+}
+
+let exampleSeven = () => {
+    let exampleSeven = document.querySelector("#exampleSeven");
+    exampleSeven.querySelector("#main").style.alignContent = "space-evenly";
+}
+</script>
+</body>
+</html>

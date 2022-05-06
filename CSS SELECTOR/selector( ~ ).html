@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+/* div ~ #one + #two + #three {
+    background: #ff0000;
+} */
+
+div#sectionOne ~ div#sectionTwo > p ~ #two {
+    background: #ff0000;
+}
+</style>
+</head>
+<body>
+<div id="sectionOne"><hr>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+</div><hr>
+
+<div id="sectionTwo">
+    <p>The first paragraph.</p>
+    <span id="one">1</span>
+    <span id="two">2</span>
+    <span id="three">3</span>
+</div>
+
+<div id="sectionThree"><hr>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+</div><hr>
+
+<div id="sectionFour"><hr>
+    <h2>Another list</h2>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+</div><hr>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#exampleOne > .item1 { grid-area: 1 / 1 / 2 / 2; }
+#exampleOne > .item2 { grid-area: 1 / 2 / 2 / 3; }
+#exampleOne > .item3 { grid-area: 1 / 3 / 2 / 4; }
+#exampleOne > .item4 { grid-area: 2 / 1 / 3 / 2; }
+#exampleOne > .item5 { grid-area: 2 / 2 / 3 / 3; }
+#exampleOne > .item6 { grid-area: 2 / 3 / 3 / 4; }
+#exampleOne {
+    display: grid;
+    grid-auto-rows: 150px;
+    grid-gap: 2px;
+    background-color: #2196F3;
+    padding: 2px;
+    width: 50%;
+}
+#exampleOne > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<div><hr>
+    <button onclick="setGridAutoRows()">setGridAutoRows</button>
+    <button onclick="setDefault()">setDefault</button>
+    <div id="exampleOne">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>  
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+    </div>
+</div><hr>
+
+<script>
+let setGridAutoRows = () => {
+    let setGridAutoRows = document.querySelector("#exampleOne").style.gridAutoRows = "60px";
+}
+let setDefault = () => {
+    let setDefault = document.querySelector("#exampleOne").style.gridAutoRows = "150px";
+}
+</script>
+</body>
+</html>

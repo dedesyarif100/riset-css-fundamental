@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#sectionOne > p:first-child {
+    background-color: yellow;
+}
+
+#sectionOne > p:last-child {
+    background-color: #f2c600;
+}
+
+#sectionTwo > p:first-child {
+    background-color: green;
+}
+
+#sectionTwo > p:first-child {
+    background-color: #ffe261;
+}
+#exampleTwo * li:first-child {
+    background-color: #ff6663;
+}
+
+#exampleTwo > ul > :last-child,
+#exampleTwo > ol > :last-child {
+    background-color: #78fffa;
+}
+</style>
+</head>
+<body>
+
+<div><hr>
+    <div id="sectionOne">
+        <p>This paragraph is the first child of its parent (body).</p>
+        <p>This paragraph is not the first child of its parent (body).</p>
+    </div>
+    <div id="sectionTwo">
+        <p>This paragraph is the first child of its parent (div).</p>
+        <p>This paragraph is not the first child of its parent (div).</p>
+    </div>
+</div><hr>
+
+<div id="exampleTwo"><hr>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul> 
+    <ol>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ol>
+</div><hr>
+</body>
+</html>

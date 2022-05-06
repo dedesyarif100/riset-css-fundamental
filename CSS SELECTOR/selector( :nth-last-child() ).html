@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#exampleOne > p:nth-last-child(4) {
+    background: red;
+}
+
+#exampleTwo > p:nth-last-child(odd) {
+    background: #abff8a;
+}
+#exampleTwo > p:nth-last-child(even) {
+    background: #8affeb;
+}
+
+#exampleThree > p:nth-last-child(3n+0) {
+    background: #7883ff;
+}
+</style>
+</head>
+<body>
+<div id="exampleOne"><hr>
+    <p>The first paragraph.</p>
+    <p>The second paragraph.</p>
+    <p>The third paragraph.</p>
+    <p>The fourth paragraph.</p>
+</div><hr>
+
+<div id="exampleTwo"><hr>
+    <p>The first paragraph.</p>
+    <p>The second paragraph.</p>
+    <p>The third paragraph.</p>
+    <p>The third paragraph.</p>
+    <p>The third paragraph.</p>
+    <p>The third paragraph.</p>
+    <p>The third paragraph.</p>
+    <p>The third paragraph.</p>
+</div><hr>
+
+<div id="exampleThree"><hr>
+    <p>The first paragraph.</p>
+    <p>The second paragraph.</p>
+    <p>The third paragraph.</p>
+    <p>The third paragraph.</p>
+    <p>The third paragraph.</p>
+    <p>The third paragraph.</p>
+    <p>The third paragraph.</p>
+    <p>The third paragraph.</p>
+    <p>The third paragraph.</p>
+</div><hr>
+</body>
+</html>

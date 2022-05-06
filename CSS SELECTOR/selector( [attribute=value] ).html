@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+a[target=_blank] {
+    background-color: yellow;
+}
+
+input[type=text] {
+    width: 100px;
+    -webkit-transition: width .35s ease-in-out;
+    transition: width .35s ease-in-out;
+}
+input[type=text]:focus {
+    width: 250px;
+}
+</style>
+</head>
+<body>
+<h1>Demo of the [attribute=value] selector</h1>
+<p>Links with target="_blank" is styled with a yellow background:</p>
+<div><hr>
+    <a href="https://www.w3schools.com">W3schools.com</a><br>
+    <a href="https://www.google.com" target="_blank">Google.com</a><br>
+    <a href="https://www.microsoft.com" target="_self">Microsoft.com</a>
+</div><hr>
+
+<div><hr>
+    Search: <input type="text" name="search">
+</div><hr>
+</body>
+</html>

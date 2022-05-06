@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.content::after {
+    content: " But you already knew that.";
+}
+.exampleTwo::before {
+    content: attr(id);
+}
+</style>
+</head>
+<body>
+<h1>Change content property with JavaScript</h1>
+
+<div><hr>
+    <button onclick="addContent()">addContent</button>
+    <button onclick="setDefault()">setDefault</button>
+    <div id="content">This is my DIV element.</div>
+</div><hr>
+
+<div><hr>
+    <button onclick="addContentWithAttr()">addContentWithAttr</button>
+    <button onclick="removeContentWithAttr()">setDefault</button>
+    <div id="exampleTwo">This is my DIV element.</div>
+</div><hr>
+
+<script>
+// content
+let addContent = () => {
+    document.querySelector("#content").className += "content";
+}
+let setDefault = () => {
+    document.querySelector("#content").classList.remove("content");
+}
+
+// exampleTwo
+let addContentWithAttr = () => {
+    let exampleTwo = document.querySelector("#exampleTwo");
+    exampleTwo.className += "exampleTwo";
+    exampleTwo.style.backgroundColor = "yellow";
+}
+let removeContentWithAttr = () => {
+    let exampleTwo = document.querySelector("#exampleTwo");
+    exampleTwo.classList.remove("exampleTwo");
+    exampleTwo.style.removeProperty("background-color");
+}
+</script>
+</body>
+</html>

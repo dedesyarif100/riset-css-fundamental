@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    text-align: center;
+}
+.flex-item-left {
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 50%;
+}
+.flex-item-right {
+    background-color: dodgerblue;
+    padding: 10px;
+    flex: 50%;
+}
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 800px) {
+    .flex-item-right, .flex-item-left {
+        flex: 100%;
+    }
+}
+
+#exampleTwo {
+    width: 250px;
+    height: 100px;
+    border: 1px solid #c3c3c3;
+    display: flex;
+}
+#exampleTwo div {
+    flex: 0 0 50px;
+}
+</style>
+</head>
+<body>
+<h1>Responsive Flexbox</h1>
+
+<div><hr>
+    <div class="flex-container">
+        <div class="flex-item-left">1</div>
+        <div class="flex-item-right">2</div>
+    </div>
+</div><hr>
+
+<div><hr>
+    <div id="exampleTwo">
+        <div style="background-color:coral;">Red DIV</div>
+        <div style="background-color:lightblue;" id="myBlueDiv">Blue DIV</div>
+    </div>
+    <button onclick="setFlex()">setFlex</button>
+    <button onclick="setDefault()">setDefault</button>
+</div><hr>
+<script>
+let setFlex = () => {
+    let setFlex = document.querySelector("#exampleTwo");
+    setFlex.querySelectorAll("div")[1].style.flex = "0 0 200px";
+}
+let setDefault = () => {
+    let setFlex = document.querySelector("#exampleTwo");
+    setFlex.querySelectorAll("div")[1].style.flex = "0 0 50px";
+}
+</script>
+</body>
+</html>

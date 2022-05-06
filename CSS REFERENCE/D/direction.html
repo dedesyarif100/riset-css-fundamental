@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#exampleOne {
+    width: 500px;
+    height: 500px;
+    background-color: lightblue;
+}
+</style>
+</head>
+<body>
+<h1>Change direction property with JavaScript</h1>
+
+<div><hr>
+    <button onclick="setDirection()">setDirection</button>
+    <button onclick="setDefault()">setDefault</button>
+    <div id="exampleOne">
+        This is my DIV element.
+    </div>
+</div><hr>
+
+<script>
+let setDirection = () => {
+    document.querySelector("#exampleOne").style.direction = "rtl";
+}
+let setDefault = () => {
+    document.querySelector("#exampleOne").style.direction = "ltr";
+}
+</script>
+</body>
+</html>

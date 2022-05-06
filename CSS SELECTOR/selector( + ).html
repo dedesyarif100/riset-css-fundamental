@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* #sectionOne + p + span + h1 + h2 + h3 + h4 {
+    background-color: yellow;
+} */
+#sectionOne + .exampleOne + span.exampleTwo + [class="exampleThree"] + h2[class="exampleFour"] + h3[name="exampleFive"] + h4 {
+    background-color: yellow;
+}
+
+#sectionTwo + #sectionThree > div * {
+    background-color: red;
+}
+</style>
+</head>
+<body>
+    <h1>Demo of the element + element selector</h1>
+    <div id="sectionOne">
+        <hr>
+            <span>My name is Donald</span>
+            <p>I live in Duckburg.</p>
+        <hr>
+    </div>
+
+    <p class="exampleOne">tes</p>
+    <span class="exampleTwo">span</span>
+    <h1 class="exampleThree">H1</h1>
+    <h2 class="exampleFour">H2</h2>
+    <h3 name="exampleFive">H3</h3>
+    <h4 class="exampleSix">H4</h4>
+
+    <!-- -------------------------------------------------------------------------------------------- -->
+    <div id="sectionTwo">
+        <hr>
+            <span><p>I will not be styled.</p></span>
+        <hr>
+    </div>
+
+    <div id="sectionThree"><hr>
+        <div class="one"><hr>
+            <div>
+                <h1>Hello</h1>
+                <h2>Hello</h2>
+                <h3>Hello</h3>
+                <h4>Hello</h4>
+                <h5>Hello</h5>
+                <h6>Hello</h6>
+            </div>
+        </div><hr>
+        <div class="two"><hr>
+            <div>
+                <h1>Hello</h1>
+                <h2>Hello</h2>
+                <h3>Hello</h3>
+                <h4>Hello</h4>
+                <h5>Hello</h5>
+                <h6>Hello</h6>
+            </div>
+        </div><hr>
+        <div class="three"><hr>
+            <div>
+                <h1>Hello</h1>
+                <h2>Hello</h2>
+                <h3>Hello</h3>
+                <h4>Hello</h4>
+                <h5>Hello</h5>
+                <h6>Hello</h6>
+            </div>
+        </div><hr>
+    </div><hr>    
+</body>
+</html>

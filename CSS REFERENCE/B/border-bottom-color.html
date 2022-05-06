@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#exampleOne {
+    border: 7px solid black;
+    width: 300px;
+    height: 150px;
+}
+</style>
+</head>
+<body>
+
+<div id="exampleOne"><hr>
+    <h1>Hello</h1>
+    <button onclick="exampleOne()">Try it</button>
+</div><hr>
+
+<script>
+let exampleOne = () => {
+    document.querySelector("#exampleOne").style.borderBottomColor = "red";
+}
+</script>
+</body>
+</html>

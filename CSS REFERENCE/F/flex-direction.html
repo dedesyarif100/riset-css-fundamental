@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+<style>
+#exampleTwo {
+    width: 400px;
+    height: 100px;
+    border: 1px solid #c3c3c3;
+    display: inline;
+    flex-direction: row;
+}
+#exampleTwo div {
+    width: 50px;
+    height: 50px;
+}
+</style>
+</head>
+<body>
+
+<div><hr>
+    <button onclick="setDisplayFlex()">setDisplayFlex</button>
+    <button onclick="setDisplayInlineExampleTwo()">setDisplayInlineExampleTwo</button>
+    <button onclick="setFlexDirectionRow()">setFlexDirectionRow</button>
+    <button onclick="setFlexDirectionColumn()">setFlexDirectionColumn</button>
+    <button onclick="setFlexDirectionRowReverse()">setFlexDirectionRowReverse</button>
+    <button onclick="setFlexDirectionColumnReverse()">setFlexDirectionColumnReverse</button>
+    <div id="exampleTwo">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+</div><hr>
+<script>
+let setDisplayFlex = () => {
+    let setDefault = document.querySelector("#exampleTwo");
+    setDefault.style.display = "flex";
+}
+let setDisplayInlineExampleTwo = () => {
+    let setDefault = document.querySelector("#exampleTwo");
+    setDefault.style.display = "inline";
+}
+let setFlexDirectionRow = () => {
+    let setFlexDirectionRow = document.querySelector("#exampleTwo");
+    setFlexDirectionRow.style.flexDirection = "row";
+}
+let setFlexDirectionColumn = () => {
+    let setFlexDirectionColumn = document.querySelector("#exampleTwo");
+    setFlexDirectionColumn.style.flexDirection = "column";
+}
+let setFlexDirectionRowReverse = () => {
+    let setFlexDirectionRowReverse = document.querySelector("#exampleTwo");
+    setFlexDirectionRowReverse.style.flexDirection = "row-reverse";
+}
+let setFlexDirectionColumnReverse = () => {
+    let setFlexDirectionColumnReverse = document.querySelector("#exampleTwo");
+    setFlexDirectionColumnReverse.style.flexDirection = "column-reverse";
+}
+</script>
+</body>
+</html>

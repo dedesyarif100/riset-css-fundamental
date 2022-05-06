@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#sectionOne > [lang|=en],
+#sectionTwo > [class|=top] {
+    background: yellow;
+}
+</style>
+</head>
+<body>
+<h1>Demo of the [attribute|=value] selector</h1>
+<p>Elements with a lang attribute with value "en" is styled with a yellow background:</p>
+
+<div id="sectionOne"><hr>
+    <p lang="en">Hello!</p>
+    <p lang="en-us">Hi!</p>
+    <p lang="en-gb">Ello!</p>
+    <p lang="us">Hi!</p>
+    <p lang="no">Hei!</p>
+</div><hr>
+
+<div id="sectionTwo"><hr>
+    <h1 class="top-header">Welcome</h1>
+    <p class="top-text">Hello world!</p>
+    <p class="content">Are you learning CSS?</p>
+</div><hr>
+
+</body>
+</html>

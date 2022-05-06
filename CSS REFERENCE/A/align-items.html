@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* stretch */
+#exampleOne > #main {
+    width: 600px;
+    height: 300px;
+    border: 1px solid black; 
+    display: flex;
+    align-items: flex-start;
+}
+#exampleOne > #main > div {
+    flex: 1;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+/* center */
+#exampleTwo > #main {
+    width: 600px;
+    height: 300px;
+    border: 1px solid black; 
+    display: flex;
+    align-items: flex-start;
+}
+#exampleTwo > #main > div {
+    flex: 1;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+/* flex-start */
+#exampleThree > #main {
+    width: 600px;
+    height: 300px;
+    border: 1px solid black; 
+    display: flex;
+    align-items: flex-start;
+}
+#exampleThree > #main > div {
+    flex: 1;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+/* flex-end */
+#exampleFour > #main {
+    width: 600px;
+    height: 300px;
+    border: 1px solid black; 
+    display: flex;
+    align-items: flex-start;
+}
+#exampleFour > #main > div {
+    flex: 1;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+/* baseline */
+#exampleFive > #main {
+    width: 600px;
+    height: 300px;
+    border: 1px solid black; 
+    display: flex;
+    align-items: flex-start;
+}
+#exampleFive > #main > div {
+    flex: 1;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+</style>
+</head>
+<body>
+    
+<div id="exampleOne"><hr>
+    <h2>align-items: stretch</h2>
+    <div id="main">
+        <div style="background-color:coral;min-height:30px;">RED</div>
+        <div style="background-color:lightblue;min-height:50px;">BLUE</div>  
+        <div style="background-color:lightgreen;min-height:190px;">Green div with more content.</div>
+    </div>
+    <button onclick="exampleOne()">Click</button>
+</div><hr>
+
+<div id="exampleTwo"><hr>
+    <h2>align-items: center</h2>
+    <div id="main">
+        <div style="background-color:coral;min-height:30px;">RED</div>
+        <div style="background-color:lightblue;min-height:50px;">BLUE</div>  
+        <div style="background-color:lightgreen;min-height:190px;">Green div with more content.</div>
+    </div>
+    <button onclick="exampleTwo()">Click</button>
+</div><hr>
+
+<div id="exampleThree"><hr>
+    <h2>align-items: flex-start</h2>
+    <div id="main">
+        <div style="background-color:coral;min-height:30px;">RED</div>
+        <div style="background-color:lightblue;min-height:50px;">BLUE</div>  
+        <div style="background-color:lightgreen;min-height:190px;">Green div with more content.</div>
+    </div>
+    <button onclick="exampleThree()">Click</button>
+</div><hr>
+
+<div id="exampleFour"><hr>
+    <h2>align-items: flex-end</h2>
+    <div id="main">
+        <div style="background-color:coral;min-height:30px;">RED</div>
+        <div style="background-color:lightblue;min-height:50px;">BLUE</div>  
+        <div style="background-color:lightgreen;min-height:190px;">Green div with more content.</div>
+    </div>
+    <button onclick="exampleFour()">Click</button>
+</div><hr>
+
+<div id="exampleFive"><hr>
+    <h2>align-items: baseline</h2>
+    <div id="main">
+        <div style="background-color:coral;min-height:30px;">RED</div>
+        <div style="background-color:lightblue;min-height:50px;">BLUE</div>  
+        <div style="background-color:lightgreen;min-height:190px;">Green div with more content.</div>
+    </div>
+    <button onclick="exampleFive()">Click</button>
+</div><hr>
+
+<script>
+let exampleOne = () => {
+    let exampleOne = document.querySelector("#exampleOne");
+    exampleOne.querySelector("#main").style.alignItems = "stretch";
+}
+
+let exampleTwo = () => {
+    let exampleTwo = document.querySelector("#exampleTwo");
+    exampleTwo.querySelector("#main").style.alignItems = "center";
+}
+
+let exampleThree = () => {
+    let exampleThree = document.querySelector("#exampleThree");
+    exampleThree.querySelector("#main").style.alignItems = "flex-start";
+}
+
+let exampleFour = () => {
+    let exampleFour = document.querySelector("#exampleFour");
+    exampleFour.querySelector("#main").style.alignItems = "flex-end";
+}
+
+let exampleFive = () => {
+    let exampleFive = document.querySelector("#exampleFive");
+    exampleFive.querySelector("#main").style.alignItems = "baseline";
+}
+</script>
+</body>
+</html>

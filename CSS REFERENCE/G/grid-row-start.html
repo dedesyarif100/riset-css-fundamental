@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#exampleOne {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 2px;
+    background-color: #2196F3;
+    padding: 2px;
+    width: 50%;
+}
+#exampleOne > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<div><hr>
+    <button onclick="setGridRowStart()">setGridRowStart</button>
+    <button onclick="setGridRowStartWithSpan()">setGridRowStartWithSpan</button>
+    <button onclick="setDefault()">setDefault</button>
+    <div id="exampleOne">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>  
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+    </div>
+</div><hr>
+
+<script>
+let setGridRowStart = () => {
+    let setGridRowStart = document.querySelector(".item1").style.gridRowStart = "2";
+}
+let setGridRowStartWithSpan = () => {
+    let setGridRowStartWithSpan = document.querySelector(".item1").style.gridRowStart = "span 2";
+}
+let setDefault = () => {
+    let setDefault = document.querySelector(".item1").style.gridRowStart = "1";
+}
+</script>
+</body>
+</html>

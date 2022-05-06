@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#exampleOne {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+}
+</style>
+</head>
+<body>
+
+<div id="exampleOne"><hr>
+    <h1>Set Color</h1>
+    <button onclick="setColor()">Set Color</button>
+</div><hr>
+
+<script>
+let setColor = () => {
+    document.querySelector("#exampleOne").style.color = "lightblue";
+}
+</script>
+</body>
+</html>

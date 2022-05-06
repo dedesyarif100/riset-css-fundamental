@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#exampleOne {
+    width: 350px;
+    height: 100px;
+    border: 1px solid #c3c3c3;
+    display: flex;
+}
+#exampleOne div {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100px;
+}
+</style>
+</head>
+<body>
+<h1>The flex-shrink Property</h1>
+
+<div><hr>
+    <button onclick="setFlexShrink()">setFlexShrink</button>
+    <button onclick="setDefault()">setDefault</button>
+    <div id="exampleOne">
+        <div style="background-color:coral;"></div>
+        <div style="background-color:lightblue;"></div>
+        <div style="background-color:khaki;"></div>
+        <div style="background-color:pink;"></div>
+        <div style="background-color:lightgrey;"></div>
+    </div>
+</div><hr>
+<script>
+let setFlexShrink = () => {
+    let setFlexShrink = document.querySelector("#exampleOne");
+    setFlexShrink.querySelectorAll("div")[1].style.flexShrink = "3";
+}
+let setDefault = () => {
+    let setFlexShrink = document.querySelector("#exampleOne");
+    setFlexShrink.querySelectorAll("div")[1].style.flexShrink = "1";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<div id="exampleOne"><hr>
+    <h1>A heading with a solid red bottom border</h1>
+    <button onclick="Solid()">Solid</button>
+    <button onclick="Dotted()">Dotted</button>
+    <button onclick="Double()">Double</button>
+    <button onclick="SetDefault()">Set Default</button>
+</div><hr>
+
+<script>
+let Solid = () => {
+    let exampleOne = document.querySelector("#exampleOne");
+    exampleOne.querySelector("h1").style.borderBottom = "3px solid red";
+}
+let Dotted = () => {
+    let exampleOne = document.querySelector("#exampleOne");
+    exampleOne.querySelector("h1").style.borderBottom = "10px dotted red";
+}
+let Double = () => {
+    let exampleOne = document.querySelector("#exampleOne");
+    exampleOne.querySelector("h1").style.borderBottom = "10px double green";
+}
+let SetDefault = () => {
+    let exampleOne = document.querySelector("#exampleOne");
+    exampleOne.querySelector("h1").style.removeProperty("border");
+}
+</script>
+</body>
+</html>

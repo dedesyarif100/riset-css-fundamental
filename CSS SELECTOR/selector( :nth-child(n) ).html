@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Selects the second li element in a list */
+#exampleOne * li:nth-child(1),
+#exampleOne * li:nth-child(3) {
+  	background: lightgreen;
+}
+
+#exampleTwo > p:nth-child(odd) {
+    background: #ffa1a1;
+}
+#exampleTwo > p:nth-child(even) {
+    background: #ffaf59;
+}
+
+#exampleThree > p:nth-child(3n + 0) {
+    background: #afff99;
+}
+
+#exampleFour > p:nth-child(3n-1) {
+    background: #f7ff8a;
+}
+</style>
+</head>
+<body>
+
+<div id="exampleOne"><hr>
+    <ul>
+        <li>First list item</li>
+        <li>Second list item</li>
+        <li>Third list item</li>
+        <li>Fourth list item</li>
+        <li>Fifth list item</li>
+    </ul>
+</div><hr>
+
+<div id="exampleTwo"><hr>
+    <p>The first paragraph.</p>
+    <p>The second paragraph.</p>
+    <p>The third paragraph.</p>
+    <p>The fourth paragraph.</p>
+    <p>The fifth paragraph.</p>
+</div><hr>
+
+<div id="exampleThree"><hr>
+    <p>The first paragraph.</p>
+    <p>The second paragraph.</p>
+    <p>The third paragraph.</p>
+    <p>The fourth paragraph.</p>
+    <p>The fifth paragraph.</p>
+    <p>The sixty paragraph.</p>
+    <p>The seven paragraph.</p>
+    <p>The eight paragraph.</p>
+    <p>The nine paragraph.</p>
+</div><hr>
+
+<div id="exampleFour"><hr>
+    <p>The first paragraph.</p>
+    <p>The second paragraph.</p>
+    <p>The third paragraph.</p>
+    <p>The fourth paragraph.</p>
+    <p>The fifth paragraph.</p>
+    <p>The sixty paragraph.</p>
+    <p>The seven paragraph.</p>
+    <p>The eight paragraph.</p>
+    <p>The nine paragraph.</p>
+</div><hr>
+
+</body>
+</html>

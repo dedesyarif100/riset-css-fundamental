@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#exampleOne {
+    width: 300px;
+    border: 1px solid;
+}
+
+#exampleOne > div.box {
+    width: 150px;
+    border: 1px solid coral;
+    float: left;
+    padding: 4px;
+}
+</style>
+</head>
+<body>
+<h1>Change box-sizing with JavaScript</h1>
+
+<div><hr>
+    <div id="exampleOne">
+        <div class="box" id="box1">This is BOX1.</div>
+        <div class="box" id="box2">This is BOX2.</div>
+        <div style="clear:both;"></div>
+    </div>
+    <button onclick="setBoxSizing()">Set Box Sizing</button>
+    <button onclick="setDefault()">Set Default</button>
+</div><hr>
+
+<script>
+let setBoxSizing = () => {
+    let exampleOne = document.querySelector("#exampleOne");
+    exampleOne.querySelector("#box1").style.boxSizing = "border-box";
+    exampleOne.querySelector("#box2").style.boxSizing = "border-box";
+}
+let setDefault = () => {
+    let exampleOne = document.querySelector("#exampleOne");
+    exampleOne.querySelector("#box1").style.removeProperty("box-sizing");
+    exampleOne.querySelector("#box2").style.removeProperty("box-sizing");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<div><hr>
+    <button onclick="collapse()">collapse</button>
+    <button onclick="separate()">separate</button>
+    <table id="table">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Emil</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>Tobias</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>Linus</td>
+            <td>2</td>
+        </tr>
+    </table>
+</div><hr>
+
+<script>
+let collapse = () => {
+    document.querySelector("#table").style.borderCollapse = "collapse";
+}
+let separate = () => {
+    document.querySelector("#table").style.borderCollapse = "separate";
+}
+</script>
+</body>
+</html>

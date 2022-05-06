@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#exampleOne {
+    display: grid;
+    grid: auto / auto auto auto auto;
+    grid-gap: 10px !important;
+    background-color: #2196F3;
+    padding: 10px;
+    width: 50%;
+}
+#exampleOne > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+#exampleTwo > .item1 { grid-area: header; }
+#exampleTwo > .item2 { grid-area: menu; }
+#exampleTwo > .item3 { grid-area: main; }
+#exampleTwo > .item4 { grid-area: right; }
+#exampleTwo > .item5 { grid-area: footer; }
+#exampleTwo {
+    display: grid;
+    grid:
+    'header header header header header header'
+    'menu menu main main right right'
+    'menu menu footer footer footer footer';
+    grid-gap: 5px;
+    background-color: #2196F3;
+    padding: 10px;
+    width: 50%;
+}
+#exampleTwo > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+#exampleThree > .item1 {
+  	grid-area: myArea;
+}
+#exampleThree {
+    display: grid;
+    grid: 	'myArea myArea . . .'
+    		'myArea myArea . . .';
+    grid-gap: 2px;
+    background-color: #2196F3;
+    padding: 10px;
+    width: 50%;
+}
+#exampleThree > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+</style>
+</head>
+<body>
+<h1>Change the grid Property with JavaScript</h1>
+
+<div><hr>
+    <button onclick="setGrid()">setGrid</button>
+    <button onclick="setDefault()">setDefault</button>
+    <div id="exampleOne">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>  
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+        <div class="item8">8</div>
+    </div>
+</div><hr>
+
+<div><hr>
+    <div id="exampleTwo">
+        <div class="item1">Header</div>
+        <div class="item2">Menu</div>
+        <div class="item3">Main</div>  
+        <div class="item4">Right</div>
+        <div class="item5">Footer</div>
+    </div>
+</div><hr>
+
+<div><hr>
+    <div id="exampleThree">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>  
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+        <div class="item8">8</div>
+        <div class="item9">9</div>
+        <div class="item10">10</div>
+        <div class="item11">11</div>
+        <div class="item12">12</div>
+    </div>
+</div><hr>
+
+<script>
+let setGrid = () => {
+    document.querySelector("#exampleOne").style.grid = "90px / auto auto";
+}
+let setDefault = () => {
+    let setDefault = document.querySelector("#exampleOne");
+    setDefault.style.grid = "auto / auto auto auto auto";
+}
+</script>
+</body>
+</html>

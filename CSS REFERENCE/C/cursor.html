@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#exampleOne {
+    width: 500px;
+    height: 500px;
+    background-color: lightblue;
+}
+</style>
+</head>
+<body>
+<h1>Change cursor with JavaScript</h1>
+
+<div><hr>
+    <button onclick="setCursor()">setCursor</button>
+    <button onclick="setDefault()">setDefault</button>
+    <div id="exampleOne">
+        <h3>Mouse over me, and check out the mouse-cursor.</h3>
+    </div>
+</div><hr>
+
+<script>
+let setCursor = () => {
+    document.querySelector("#exampleOne").style.cursor = "not-allowed";
+}
+let setDefault = () => {
+    document.querySelector("#exampleOne").style.cursor = "default";
+}
+</script>
+</body>
+</html>

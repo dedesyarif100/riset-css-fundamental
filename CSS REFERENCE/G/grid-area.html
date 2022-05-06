@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* exampleOne */
+#exampleOne {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 2px;
+    background-color: #2196F3;
+    padding: 2px;
+    width: 50%;
+}
+#exampleOne > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+#exampleOne > .item1 {
+    grid-area: 2 / 1 / span 2 / span 3;
+}
+
+/* exampleTwo */
+#exampleTwo {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 2px;
+    background-color: #2196F3;
+    padding: 2px;
+    width: 50%;
+}
+#exampleTwo > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+#exampleTwo > .item1 {
+    grid-area: 2 / 1 / span 2 / span 3;
+}
+
+/* exampleThree */
+#exampleThree {
+    display: grid;
+    grid-template-areas: 'myArea myArea myArea myArea myArea myArea';
+    grid-gap: 2px;
+    background-color: #2196F3;
+    padding: 2px;
+    width: 50%;
+}
+#exampleThree > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+#exampleThree > .item1 {
+    grid-area: myArea;
+}
+
+/* exampleFour */
+#exampleFour {
+    display: grid;
+    grid-template-areas: '. . myArea myArea .';
+    grid-gap: 2px;
+    background-color: #2196F3;
+    padding: 2px;
+    width: 50%;
+}
+#exampleFour > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+#exampleFour > .item1 {
+    grid-area: myArea;
+}
+
+/* exampleFive */
+#exampleFive {
+    display: grid;
+    grid-template-areas: 'myArea myArea . . .' 'myArea myArea . . .';
+    grid-gap: 2px;
+    background-color: #2196F3;
+    padding: 2px;
+    width: 50%;
+}
+#exampleFive > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+#exampleFive > .item1 {
+    grid-area: myArea;
+}
+
+/* exampleSix */
+#exampleSix > .item1 { grid-area: header; }
+#exampleSix > .item2 { grid-area: menu; }
+#exampleSix > .item3 { grid-area: main; }
+#exampleSix > .item4 { grid-area: right; }
+#exampleSix > .item5 { grid-area: footer; }
+#exampleSix {
+    display: grid;
+    grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+    grid-gap: 2px;
+    background-color: #2196F3;
+    padding: 2px;
+    width: 50%;
+}
+#exampleSix > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+</style>
+</head>
+<body>
+<h1>The grid-area Property</h1>
+
+<div><hr>
+    <div id="exampleOne">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>  
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+    </div>
+</div><hr>
+
+<div><hr>
+    <button onclick="setGridGap()">SetGridGap</button>
+    <button onclick="setDefault()">setDefault</button>
+    <div id="exampleTwo">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>  
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+    </div>
+</div><hr>
+
+<div><hr>
+    <div id="exampleThree">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>  
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+    </div>
+</div><hr>
+
+<div><hr>
+    <div id="exampleFour">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>  
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+        <div class="item8">8</div>
+        <div class="item9">9</div>
+    </div>
+</div><hr>
+
+<div><hr>
+    <div id="exampleFive">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>  
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+    </div>
+</div><hr>
+
+<div id="exampleSix">
+    <div class="item1">Header</div>
+    <div class="item2">Menu</div>
+    <div class="item3">Main</div>  
+    <div class="item4">Right</div>
+    <div class="item5">Footer</div>
+</div>
+
+<script>
+let setGridGap = () => {
+    let setGridGap = document.querySelector("#exampleTwo");
+    setGridGap.querySelector(".item1").style.gridArea = "1 / 3 / span 3 / span 2";
+}
+let setDefault = () => {
+    let setDefault = document.querySelector("#exampleTwo");
+    setDefault.querySelector(".item1").style.gridArea = "2 / 1 / span 2 / span 3";
+}
+</script>
+</body>
+</html>

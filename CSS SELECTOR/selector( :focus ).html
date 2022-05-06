@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#exampleOne * input:focus {
+    background-color: #d6d6d6;
+}
+
+#exampleTwo * input[type=text] {
+    width: 100px;
+    -webkit-transition: width .35s ease-in-out;
+    transition: width .35s ease-in-out;
+}
+
+#exampleTwo * input[type=text]:focus {
+    background-color: #d6d6d6;
+    width: 250px;
+}
+</style>
+</head>
+<body>
+<h1>Demo of the :focus selector</h1>
+<p>Click inside the text fields to see a yellow background:</p>
+
+<div id="exampleOne"><hr>
+    <form>
+        First name: <input type="text" name="firstname"><br>
+        Last name: <input type="text" name="lastname">
+    </form>
+</div><hr>
+
+<div id="exampleTwo"><hr>
+    <form>
+        First name: <input type="text" name="firstname"><br>
+        Last name: <input type="text" name="lastname">
+    </form>
+</div><hr>
+
+</body>
+</html>

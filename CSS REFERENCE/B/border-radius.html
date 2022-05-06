@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#exampleOne {
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+}
+</style>
+</head>
+<body>
+
+<div><hr>
+    <div id="exampleOne">
+        <h1>Hello</h1>
+        <button onclick="setBorder()">Set Border</button>
+        <button onclick="setDefault()">Set Default</button>
+    </div>
+</div><hr>
+
+<script>
+let setBorder = () => {
+    document.getElementById("exampleOne").style.borderRadius = "25px 50px 5px 5px";
+}
+let setDefault = () => {
+    document.getElementById("exampleOne").style.removeProperty("border-radius");
+}
+</script>
+</body>
+</html>
