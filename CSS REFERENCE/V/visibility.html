@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#exampleOne {
+    margin: auto;
+    width: 400px;
+    height: 200px;
+    background-color: lightblue;
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<h1>Change visibility with JavaScript</h1>
+
+<div><hr>
+    <button onclick="setHidden()">setHidden</button>
+    <button onclick="visible()">visible</button>
+    <div id="exampleOne">This is my DIV element.</div>
+</div><hr>
+
+<script>
+let setHidden = () => {
+    document.querySelector("#exampleOne").style.visibility = "hidden";
+}
+let visible = () => {
+    document.querySelector("#exampleOne").style.visibility = "visible";
+}
+</script>
+</body>
+</html>

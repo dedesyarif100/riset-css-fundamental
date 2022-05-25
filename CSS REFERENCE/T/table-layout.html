@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+table, td {
+    border: 1px solid black;
+}
+#exampleOne {
+    width: 50%;
+}
+</style>
+</head>
+<body>
+<h1>Change table-layout with JavaScript</h1>
+
+<div><hr>
+    <button onclick="auto()">auto</button>
+    <button onclick="fixed()">fixed</button>
+    <table id="exampleOne">
+        <tr>
+            <td>1000000000000000000000000000</td>
+            <td>10000000</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Smith</td>
+        </tr>
+        <tr>
+            <td>Jane</td>
+            <td>Doe</td>
+        </tr>
+    </table>
+</div><hr>
+
+<script>
+let auto = () => {
+    document.querySelector("#exampleOne").style.tableLayout = "auto";
+}
+let fixed = () => {
+    document.querySelector("#exampleOne").style.tableLayout = "fixed";
+}
+</script>
+</body>
+</html>

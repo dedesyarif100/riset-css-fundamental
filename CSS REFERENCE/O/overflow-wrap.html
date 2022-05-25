@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#exampleOne {
+    width: 150px;
+    height: 100px;
+    background-color: lightblue;
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<h1>Change overflow-wrap with JavaScript</h1>
+
+<div><hr>
+    <button onclick="setOverflowWrap()">setOverflowWrap</button>
+    <button onclick="setDefault()">setDefault</button>
+    <div id="exampleOne">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+    </div>
+</div><hr>
+
+<script>
+let setOverflowWrap = () => {
+    document.querySelector("#exampleOne").style.overflowWrap = "break-word";
+}
+let setDefault = () => {
+    document.querySelector("#exampleOne").style.overflowWrap = "normal";
+}
+</script>
+</body>
+</html>

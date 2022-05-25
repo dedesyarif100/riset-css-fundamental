@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Change list-style-type with JavaScript</h1>
+
+<div><hr>
+    <button onclick="setCircle()">setCircle</button>
+    <button onclick="setSquare()">setSquare</button>
+    <button onclick="setDecimal()">setDecimal</button>
+    <button onclick="setDecimalLeadingZero()">setDecimalLeadingZero</button>
+    <button onclick="setDefault()">setDefault</button>
+    <ul id="exampleOne">
+        <li>Emil</li>
+        <li>Tobias</li>
+        <li>Linus</li>
+    </ul>
+</div><hr>
+
+<script>
+let setDefault = () => {
+    document.querySelector("#exampleOne").style.listStyleType = "disc";
+}
+let setCircle = () => {
+    document.querySelector("#exampleOne").style.listStyleType = "circle";
+}
+let setSquare = () => {
+    document.querySelector("#exampleOne").style.listStyleType = "square";
+}
+let setDecimal = () => {
+    document.querySelector("#exampleOne").style.listStyleType = "decimal";
+}
+let setDecimalLeadingZero = () => {
+    document.querySelector("#exampleOne").style.listStyleType = "decimal-leading-zero";
+}
+</script>
+</body>
+</html>

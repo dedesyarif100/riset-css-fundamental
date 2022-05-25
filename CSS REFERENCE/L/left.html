@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#exampleOne {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid red;
+}
+#exampleOne > .b {
+    position: absolute;
+    left: auto;
+    width: 100px;
+    height: 120px;
+    border: 3px solid blue;
+} 
+#exampleOne > .c {
+    position: absolute;
+    left: 150px;
+    width: 200px;
+    height: 120px;
+    border: 3px solid green;
+} 
+</style>
+</head>
+<body>
+
+<div><hr>
+    <button onclick="setLeft()">setLeft</button>
+    <button onclick="setDefault()">setDefault</button>
+    <div id="exampleOne">This div element has position: relative;
+        <div class="b">This div element has position: absolute and left: auto.</div>
+        <div class="c">This div element has position: absolute and is placed 150 pixels to the right of the LEFT edge of the containing positioned element.</div>
+    </div>
+</div><hr>
+
+<script>
+let setLeft = () => {
+    let setLeft = document.querySelector("#exampleOne");
+    setLeft.querySelector(".c").style.left = "200px";
+}
+let setDefault = () => {
+    let setLeft = document.querySelector("#exampleOne");
+    setLeft.querySelector(".c").style.left = "150px";
+}
+</script>
+</body>
+</html>

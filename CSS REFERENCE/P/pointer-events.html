@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div#ex1 {
+    pointer-events: auto;
+}
+div#ex2 {
+    pointer-events: auto;
+}
+</style>
+</head>
+<body>
+<h1>The pointer-events Property</h1>
+
+<div><hr>
+    <h2>pointer-events: none:</h2>
+    <div id="ex1">Go to <a href="https://www.w3schools.com/html">HTML Tutorial</a></div>
+</div><hr>
+
+<div><hr>
+    <h2>pointer-events: auto (default):</h2>
+    <div id="ex2">Go to <a href="https://www.w3schools.com/css">CSS Tutorial</a></div>
+</div><hr>
+
+<div><hr>
+    <button onclick="setPointerEvents()">setPointerEvents</button>
+    <button onclick="setDefault()">setDefault</button>
+    <div id="exampleThree">Go to <a href="https://www.w3schools.com/jsref/default.asp">Javascript Tutorial</a></div>
+</div><hr>
+
+<script>
+let setPointerEvents = () => {
+    document.querySelector("#exampleThree").style.pointerEvents = "none";
+}
+let setDefault = () => {
+    document.querySelector("#exampleThree").style.pointerEvents = "auto";
+}
+</script>
+</body>
+</html>

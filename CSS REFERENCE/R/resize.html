@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#exampleOne {
+    border: 1px solid black;
+    background-color: lightblue;
+    width: 270px;
+    overflow: auto;
+}
+</style>
+</head>
+<body>
+
+<h1>Change resize with JavaScript</h1>
+
+<div><hr>
+    <button onclick="both()">both</button>
+    <button onclick="horizontal()">horizontal</button>
+    <button onclick="vertical()">vertical</button>
+    <button onclick="none()">none</button>
+    <div id="exampleOne">
+        <p>Click the "Try it" button, then click and drag the bottom right corner of this div element to resize.</p>
+    </div>
+</div><hr>
+
+<script>
+let both = () => {
+    document.querySelector("#exampleOne").style.resize = "both";
+}
+let horizontal = () => {
+    document.querySelector("#exampleOne").style.resize = "horizontal";
+}
+let vertical = () => {
+    document.querySelector("#exampleOne").style.resize = "vertical";
+}
+let none = () => {
+    document.querySelector("#exampleOne").style.resize = "none";
+}
+</script>
+</body>
+</html>

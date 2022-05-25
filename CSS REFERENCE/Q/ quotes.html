@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Change quote property with JavaScript</h1>
+
+<div><hr>
+    <q id="exampleOne">This is a quote.</q>
+    <button onclick="doubleLeftAngleQuote()">doubleLeftAngleQuote</button>
+    <button onclick="setDefault()">setDefault</button>
+</div><hr>
+
+<script>
+let doubleLeftAngleQuote = () => {
+    document.querySelector("#exampleOne").style.quotes = "'\00AB' '\00AB'";
+}
+let setDefault = () => {
+    document.querySelector("#exampleOne").style.quotes = "'\0022' '\0022'";
+}
+</script>
+</body>
+</html>

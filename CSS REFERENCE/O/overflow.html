@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+<style>
+div#exampleOne {
+    background-color: lightblue;
+    width: 110px;
+    height: 110px;
+    overflow: visible;
+}
+</style>
+</head>
+<body>
+
+<div><hr>
+    <button onclick="setOverflowScroll()">setOverflowScroll</button>
+    <button onclick="setOverflowHidden()">setOverflowHidden</button>
+    <button onclick="setOverflowAuto()">setOverflowAuto</button>
+    <button onclick="setOverflowClip()">setOverflowClip</button>
+    <button onclick="setDefault()">setDefault</button>
+    <h2>overflow: scroll:</h2>
+    <div id="exampleOne">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    </div>
+</div><hr>
+
+<script>
+let setOverflowScroll = () => {
+    let setOverflowScroll = document.querySelector("#exampleOne").style.overflow = "scroll";
+}
+let setOverflowHidden = () => {
+    let setOverflowScroll = document.querySelector("#exampleOne").style.overflow = "hidden";
+}
+let setOverflowAuto = () => {
+    let setOverflowScroll = document.querySelector("#exampleOne").style.overflow = "auto";
+}
+let setOverflowClip = () => {
+    let setOverflowScroll = document.querySelector("#exampleOne").style.overflow = "clip";
+}
+let setDefault = () => {
+    let setOverflowScroll = document.querySelector("#exampleOne").style.overflow = "visible";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#DIV1 {
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    background-color: lightblue;
+    border: 1px solid black;
+}
+#DIV2 {
+    position: relative;
+    top: 100px;
+    left: 30px;
+    width: 300px;
+    height: 120px;
+    background-color: coral;
+    border: 1px solid black;
+}
+
+#p1 {
+    background-color: yellow;
+}
+</style>
+</head>
+<body>
+<h1>Change opacity with JavaScript</h1>
+
+<div><hr>
+    <p id="p1">Select a value from the list below, to change this element's opacity!</p>
+    <select onchange="setOpacitySelectOption(this);" size="5">
+        <option>0
+        <option>0.2
+        <option>0.5
+        <option>0.8
+        <option selected="selected">1
+    </select>
+</div><hr>
+
+<div><hr>
+    <button onclick="setOpacity()">setOpacity</button>
+    <button onclick="setDefault()">setDefault</button>
+    <div id="DIV2">
+        <h1>Voila!</h1>
+    </div>
+    <div id="DIV1"></div>
+</div><hr>
+
+<script>
+let setOpacitySelectOption = (x) => {
+    // console.log(x.options[x.selectedIndex].text);
+    // Return the text of the selected option
+    var opacity = x.options[x.selectedIndex].text;
+    var el = document.getElementById("p1");
+    console.log(el.style.opacity);
+    if (el.style.opacity !== undefined) {
+        el.style.opacity = opacity;
+    } else {
+        alert("Your browser doesn't support this example!");
+    }
+}
+
+let setOpacity = () => {
+    document.getElementById("DIV1").style.opacity = "0.5";
+}
+let setDefault = () => {
+    document.getElementById("DIV1").style.opacity = "1";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#exampleOne > .item1,
+#exampleTwo > .item1 {
+    grid-area: myArea;
+}
+#exampleOne, #exampleTwo {
+    display: grid;
+    grid-gap: 2px;
+    background-color: #2196F3;
+    padding: 2px;
+    width: 50%;
+}
+#exampleOne {
+    grid-template-areas: ' . . myArea myArea .';
+}
+#exampleTwo {
+    grid-template-areas:
+        '. . . . .'
+        '. . . . .'
+        '. myArea myArea myArea .'
+        '. myArea myArea myArea .'
+        '. myArea myArea myArea .';
+}
+#exampleOne > div,
+#exampleTwo > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+#exampleThree > .item1 {
+    grid-area: header;
+}
+#exampleThree > .item2 {
+    grid-area: menu;
+}
+#exampleThree > .item3 {
+    grid-area: main;
+}
+#exampleThree > .item4 {
+    grid-area: right;
+}
+#exampleThree > .item15 {
+    grid-area: footer;
+}
+#exampleThree {
+    display: grid;
+    grid-template-areas:
+        'header header header main main main'
+        'menu menu right main main main'
+        'menu menu footer main main main';
+    grid-gap: 2px;
+    background-color: #2196F3;
+    padding: 2px;
+    width: 50%;
+}
+#exampleThree > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<div><hr>
+    <div id="exampleOne">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>  
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+        <div class="item8">8</div>
+        <div class="item9">9</div>
+    </div>
+</div><hr>
+
+<div><hr>
+    <div id="exampleTwo">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>  
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+        <div class="item8">8</div>
+        <div class="item9">9</div>
+        <div class="item10">10</div>
+        <div class="item11">11</div>
+        <div class="item12">12</div>
+        <div class="item13">13</div>
+        <div class="item14">14</div>
+        <div class="item15">15</div>
+        <div class="item16">16</div>
+        <div class="item17">17</div>
+        <div class="item18">18</div>
+        <div class="item19">19</div>
+        <div class="item20">20</div>
+        <div class="item21">21</div>
+        <div class="item22">22</div>
+        <div class="item23">23</div>
+        <div class="item24">24</div>
+        <div class="item25">25</div>
+        <div class="item26">26</div>
+        <div class="item27">27</div>
+        <div class="item28">28</div>
+        <div class="item29">29</div>
+        <div class="item30">30</div>
+    </div>
+</div><hr>
+
+<div><hr>
+    <div id="exampleThree">
+        <div class="item1">Header</div>
+        <div class="item2">Menu</div>
+        <div class="item3">Main</div>  
+        <div class="item4">Right</div>
+        <div class="item5">Footer</div>
+    </div>
+</div><hr>
+
+</body>
+</html>

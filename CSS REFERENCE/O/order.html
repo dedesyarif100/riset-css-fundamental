@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#exampleOne {
+    width: 400px;
+    height: 150px;
+    border: 1px solid #000000;
+    display: flex;
+}
+#exampleOne div {
+    width: 70px;
+    height: 70px;
+}
+</style>
+</head>
+<body>
+
+<h1>Change order with JavaScript</h1>
+
+<div><hr>
+    <div id="exampleOne">
+        <div style="background-color:coral;" id="myRedDIV">1</div>
+        <div style="background-color:lightblue;" id="myBlueDIV">2</div>
+        <div style="background-color:lightgreen;" id="myGreenDIV">3</div>
+        <div style="background-color:pink;" id="myPinkDIV">4</div>
+    </div>
+    <button onclick="setOrder()">setOrder</button>
+    <button onclick="setDefault()">setDefault</button>
+</div><hr>
+
+<script>
+let setOrder = () => {
+    document.querySelector("#myRedDIV").style.order = "4";
+    document.querySelector("#myBlueDIV").style.order = "3";
+    document.querySelector("#myGreenDIV").style.order = "1";
+    document.querySelector("#myPinkDIV").style.order = "2";
+}
+let setDefault = () => {
+    document.querySelector("#myRedDIV").style.order = "1";
+    document.querySelector("#myBlueDIV").style.order = "2";
+    document.querySelector("#myGreenDIV").style.order = "3";
+    document.querySelector("#myPinkDIV").style.order = "4";
+}
+</script>
+</body>
+</html>
